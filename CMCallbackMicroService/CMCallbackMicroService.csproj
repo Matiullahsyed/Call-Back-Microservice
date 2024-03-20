@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9cfed612-b165-444b-965e-115dd9965ac3</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Connected Services\**" />
+    <Compile Remove="DB Scripts\**" />
+    <Content Remove="Connected Services\**" />
+    <Content Remove="DB Scripts\**" />
+    <EmbeddedResource Remove="Connected Services\**" />
+    <EmbeddedResource Remove="DB Scripts\**" />
+    <None Remove="Connected Services\**" />
+    <None Remove="DB Scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="12.0.0" />
+	  <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+	  <PackageReference Include="EFCore.NamingConventions" Version="7.0.2" />
+	  <PackageReference Include="IKVM" Version="8.3.1" />
+	  <PackageReference Include="Json.Net" Version="1.0.33" />
+	  <PackageReference Include="MassTransit" Version="8.0.13" />
+	  <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+	  <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.13" />
+	  <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="Npgsql" Version="7.0.0" />
+	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
+	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+	  <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+	  <PackageReference Include="Serilog" Version="2.12.0" />
+	  <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+	  <PackageReference Include="Serilog.Filters.Expressions" Version="2.1.0" />
+	  <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+	  <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+	  <PackageReference Include="StackExchange.Redis" Version="2.6.70" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+	  <PackageReference Include="System.ServiceModel.Duplex" Version="4.10.*" />
+	  <PackageReference Include="System.ServiceModel.Federation" Version="4.10.*" />
+	  <PackageReference Include="System.ServiceModel.Http" Version="4.10.*" />
+	  <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.*" />
+	  <PackageReference Include="System.ServiceModel.Security" Version="4.10.*" />
+  </ItemGroup>
+
+</Project>
